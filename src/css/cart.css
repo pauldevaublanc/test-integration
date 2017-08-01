@@ -16,7 +16,7 @@
 
 .cart__price {
   font-weight: 600;
-  margin: 8px 0px;
+  margin: 10px 0px;
   font-size: 20px;
 }
 
@@ -26,13 +26,33 @@
   color: #2eb2a3;
   background-color: transparent;
   border: 2px solid #2eb2a3;
-  padding: 5px 11px;
+  padding: 4px 13px;
   font-weight: 800;
-  margin: 0 3px;
+  margin: 0 1px;
   cursor: pointer;
 }
 
 .cart__badge.active {
   color: #FFF;
   background-color: #2eb2a3;
+}
+
+
+@media screen and (max-width: 580px) {
+  .cart {
+    width: 100%;
+    position: static;
+    border-bottom: 1px solid #606060;
+    box-shadow: none;
+    padding: 20px 0px;
+  }
+
+  .cart__title {
+    font-size: 20px;
+  }
+
+  .cart__badge {
+    margin: 0px 28px 15px 28px;
+  }
+
 }

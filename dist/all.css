@@ -16,7 +16,7 @@
 
 .cart__price {
   font-weight: 600;
-  margin: 8px 0px;
+  margin: 10px 0px;
   font-size: 20px;
 }
 
@@ -26,15 +26,35 @@
   color: #2eb2a3;
   background-color: transparent;
   border: 2px solid #2eb2a3;
-  padding: 5px 11px;
+  padding: 4px 13px;
   font-weight: 800;
-  margin: 0 3px;
+  margin: 0 1px;
   cursor: pointer;
 }
 
 .cart__badge.active {
   color: #FFF;
   background-color: #2eb2a3;
+}
+
+
+@media screen and (max-width: 580px) {
+  .cart {
+    width: 100%;
+    position: static;
+    border-bottom: 1px solid #606060;
+    box-shadow: none;
+    padding: 20px 0px;
+  }
+
+  .cart__title {
+    font-size: 20px;
+  }
+
+  .cart__badge {
+    margin: 0px 28px 15px 28px;
+  }
+
 }
 
 .footer {
@@ -80,8 +100,10 @@ body {
 
 .lettrine {
   float: left;
-  font-size: 25px;
+  font-size: 40px;
   font-weight: 600;
+  transform: translateY(12px);
+  padding-bottom: 1px;
 }
 
 .button {
@@ -103,6 +125,15 @@ body {
 .product-list {
   display: inline-block;
   padding: 10px 10px 10px 0px;
+}
+
+
+@media screen and (max-width: 580px) {
+  .button {
+    display: block;
+    margin: 0 auto;
+    width: 318px;
+  }
 }
 
 .header {
@@ -132,6 +163,9 @@ body {
 @media screen and (max-width: 580px) {
   .header {
     height: 400px;
+    border-bottom: none;
+    width: 95%;
+    margin: 0 auto;
   }
 
   .header__cover {
@@ -195,7 +229,7 @@ body {
     float: right;
   }
 
-  }
+}
 
 .product-wrapper {
   padding: 0px 20%;
@@ -207,8 +241,8 @@ body {
 
 .product {
   position: relative;
-  height: 165px;
-  width: 140px;
+  height: 185px;
+  width: 160px;
 
 }
 
@@ -217,8 +251,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   overflow: hidden;
   border: 1px solid #060606;
   float: left;
@@ -235,7 +269,7 @@ body {
 .product__details {
   border: 1px solid #060606;
   position: absolute;
-  top: 121px;
+  top: 141px;
   height: 45px;
   width: 100%;
 }

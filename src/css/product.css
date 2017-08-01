@@ -8,8 +8,8 @@
 
 .product {
   position: relative;
-  height: 165px;
-  width: 140px;
+  height: 185px;
+  width: 160px;
 
 }
 
@@ -18,8 +18,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   overflow: hidden;
   border: 1px solid #060606;
   float: left;
@@ -36,7 +36,7 @@
 .product__details {
   border: 1px solid #060606;
   position: absolute;
-  top: 121px;
+  top: 141px;
   height: 45px;
   width: 100%;
 }

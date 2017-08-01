@@ -37,8 +37,10 @@ body {
 
 .lettrine {
   float: left;
-  font-size: 25px;
+  font-size: 40px;
   font-weight: 600;
+  transform: translateY(12px);
+  padding-bottom: 1px;
 }
 
 .button {
@@ -60,4 +62,13 @@ body {
 .product-list {
   display: inline-block;
   padding: 10px 10px 10px 0px;
+}
+
+
+@media screen and (max-width: 580px) {
+  .button {
+    display: block;
+    margin: 0 auto;
+    width: 318px;
+  }
 }
