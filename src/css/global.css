@@ -1,0 +1,63 @@
+body {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 13px;
+  line-height: 1.5em;
+  color: #606060;
+  position: relative;
+}
+
+.title {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+  color: #606060;
+  letter-spacing: 1px;
+  font-size: 25px;
+  padding: 20px 0px;
+}
+
+.title-red {
+  color: #b23131;
+}
+
+.subtitle {
+  font-weight: 800;
+  padding-top: 15px;
+  margin-top: 10px;
+}
+
+.subtitle-blue {
+  font-size: 14px;
+  color: #2eb2a3;
+  padding-bottom: 7px;
+}
+
+.paragraph {
+  padding-bottom: 10px;
+}
+
+.lettrine {
+  float: left;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.button {
+  color: #FFF;
+  background-color: #b23131;
+  padding: 10px 70px;
+  border: none;
+  margin: 15px 0px 5px 0px;
+  cursor: pointer;
+}
+
+.list {
+  list-style-type: decimal;
+  list-style-position: inside;
+  padding-bottom: 15px;
+}
+
+
+.product-list {
+  display: inline-block;
+  padding: 10px 10px 10px 0px;
+}

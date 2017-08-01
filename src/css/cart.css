@@ -1,0 +1,38 @@
+.cart {
+  width: 215px;
+  background-color: #FFF;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #606060;
+  position: absolute;
+  top: 10%;
+  right: 10px;
+}
+
+.cart__title {
+  color: #b23131;
+  font-size: 17px;
+}
+
+.cart__price {
+  font-weight: 600;
+  margin: 8px 0px;
+  font-size: 20px;
+}
+
+.cart__badge {
+  display: inline-block;
+  border-radius: 3px;
+  color: #2eb2a3;
+  background-color: transparent;
+  border: 2px solid #2eb2a3;
+  padding: 5px 11px;
+  font-weight: 800;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+.cart__badge.active {
+  color: #FFF;
+  background-color: #2eb2a3;
+}
