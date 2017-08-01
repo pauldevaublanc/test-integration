@@ -1,7 +1,7 @@
 .header {
   height: 530px;
   width: 100%;
-  border-bottom: 1px solid #606060;
+  border-bottom: 1px solid var(--mainColor);
   overflow: hidden;
 }
 

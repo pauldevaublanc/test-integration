@@ -26,7 +26,14 @@ gulp.task('concatCss', function() {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('concatJs', function() {
+  return gulp.src('./src/js/*.js')
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('default', function() {
+  gulp.watch('./src/js/*.js', ['concatJs'])
   gulp.watch('./src/css/*.css', ['css', 'concatCss'])
   gulp.watch(['./src/*.html', './src/partials/*.html'], ['templates'])
 });

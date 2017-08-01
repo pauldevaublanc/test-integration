@@ -21,7 +21,7 @@
   width: 140px;
   height: 140px;
   overflow: hidden;
-  border: 1px solid #060606;
+  border: 1px solid var(--mainColor);
   float: left;
   margin-right: 10px;
 }
@@ -34,7 +34,7 @@
 }
 
 .product__details {
-  border: 1px solid #060606;
+  border: 1px solid var(--mainColor);
   position: absolute;
   top: 141px;
   height: 45px;

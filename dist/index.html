@@ -2,22 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Vente privée</title>
     <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto:300" rel="stylesheet" >
     <link rel="stylesheet" href="all.css">
   </head>
   <body>
-    <div class="navbar">
+    <div id="js-navbar" class="navbar">
   <div class="navbar__wrapper">
     <div class="navbar__logo">
       delibeatum
     </div>
     <nav class="navbar__menu ">
-      <div class="navbar__menu__link active">unit</div>
-      <div class="navbar__menu__link">grae</div>
-      <div class="navbar__menu__link">nihintem</div>
-      <div class="navbar__menu__link">utermis</div>
+      <div onclick="toggleColor(link, this)" class="navbar__menu__link js-navbar active">unit</div>
+      <div onclick="toggleColor(link, this)" class="navbar__menu__link js-navbar">grae</div>
+      <div onclick="toggleColor(link, this)" class="navbar__menu__link js-navbar">nihintem</div>
+      <div onclick="toggleColor(link, this)" class="navbar__menu__link js-navbar">utermis</div>
     </nav>
     <div class="navbar__burger">
       <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><path d="M4 27h28v-3H4v3zm0-8h28v-3H4v3zM4 8v3h28V8H4z"/>
@@ -32,23 +33,86 @@
   </div>
 </header>
 
-    <div class="cart">
-  <div class="cart__title">
+    <div id="js-cart" class="cart">
+  <div  class="cart__title">
     Halinver fendum etium perit
   </div>
   <div class="cart__price">
     256 €
   </div>
-  <div class="cart__badge active">
+  <div>
+  <div  onclick="toggleColor(badge, this)" class="cart__badge active js-badge">
     32 Go
   </div>
-  <div class="cart__badge">
+  <div onclick="toggleColor(badge, this)" class="cart__badge js-badge">
     64 Go
   </div>
-  <div class="cart__badge">
+  <div onclick="toggleColor(badge, this)" class="cart__badge js-badge">
     128 Go
   </div>
-  <button class="button">add to cart</button>
+  </div>
+  <button class="button js-button-cart">add to cart</button>
+</div>
+
+
+
+<div class="cart-detail js-cart-detail">
+  <div class="cart-detail__header">
+    <a href="#"><svg class="js-button-close" xmlns="http://www.w3.org/2000/svg" width="36" height="30" viewBox="0 -10 40 40"><path d="M28.5 9.62L26.38 7.5 18 15.88 9.62 7.5 7.5 9.62 15.88 18 7.5 26.38l2.12 2.12L18 20.12l8.38 8.38 2.12-2.12L20.12 18z"/></svg></a><span class="cart-detail__header__title">Your Cart</span>
+  </div>
+  <table class="cart-detail__orderTable">
+    <thead class="cart-detail__orderTable__header">
+      <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="cart-detail__orderTable__item">
+        <td>Brand1</td>
+        <td>Sapienimilis simi, quos</td>
+        <td>256 €</td>
+      </tr>
+      <tr class="cart-detail__orderTable__item">
+        <td>Brand2</td>
+        <td>Sapienimilis simi, quos</td>
+        <td>256 €</td>
+      </tr>
+      <tr class="cart-detail__orderTable__item">
+        <td>Brand3</td>
+        <td>Sapienimilis simi, quos</td>
+        <td>256 €</td>
+      </tr>
+      <tr class="cart-detail__orderTable__total">
+        <td colspan="2">Total</td>
+        <td>768 €</td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="button-secondary">checkout</button>
+  <div class="cart-detail__formHelp">
+    <p class="paragraph-help">Need Help ?</p>
+    <form action="">
+      <div>
+        <select class="cart-detail__formHelp__select" name="topic">
+          <option value="Topic">Topic</option>
+          <option value="Topic 2">Topic 2</option>
+          <option value="Topic 3">Topic 3</option>
+        </select>
+      </div>
+      <div>
+        <input class="cart-detail__formHelp__input" type="email"/>
+      </div>
+      <div>
+        <textarea class="cart-detail__formHelp__textarea"></textarea>
+      </div>
+      <div>
+        <a href="#">cancel</a>
+        <button class="button-blue">send</button>
+      </div>
+    </form>
+  </div>
 </div>
 
     <div class="product-wrapper product-wrapper-grey">
@@ -81,74 +145,77 @@
   <div class="title">
     Il id ut que doluptatem. Acerrovit as ab ipicips anihici
   </div>
-  <ul>
-    <li class="product-list">
-      <div class="product">
-        <div class="product__picture card"></div>
-        <div class="product__details">
-          <div class="product__details__title">Brand</div>
-          <div class="product__details__description">Ene cusapici is sequi</div>
-        </div>
-      </div>
-    </li>
-    <li class="product-list">
-      <div class="product">
-        <div class="product__picture card"></div>
-        <div class="product__details">
-          <div class="product__details__title">Brand</div>
-          <div class="product__details__description">Ene cusapici is sequi</div>
-        </div>
-      </div>
-    </li>
-    <li class="product-list">
-      <div class="product">
-        <div class="product__picture card"></div>
-        <div class="product__details">
-          <div class="product__details__title">Brand</div>
-          <div class="product__details__description">Ene cusapici is sequi</div>
-        </div>
-      </div>
-    </li>
-    <li class="product-list">
-      <div class="product">
-        <div class="product__picture card"></div>
-        <div class="product__details">
-          <div class="product__details__title">Brand</div>
-          <div class="product__details__description">Ene cusapici is sequi</div>
-        </div>
-      </div>
-    </li>
-    <li class="product-list">
-      <div class="product">
-        <div class="product__picture card"></div>
-        <div class="product__details">
-          <div class="product__details__title">Brand</div>
-          <div class="product__details__description">Ene cusapici is sequi</div>
-        </div>
-      </div>
-    </li>
-    <li class="product-list">
-      <div class="product">
-        <div class="product__picture card"></div>
-        <div class="product__details">
-          <div class="product__details__title">Brand</div>
-          <div class="product__details__description">Ene cusapici is sequi</div>
-        </div>
-      </div>
-    </li>
-    <li class="product-list">
-      <div class="product">
-        <div class="product__picture card"></div>
-        <div class="product__details">
-          <div class="product__details__title">Brand</div>
-          <div class="product__details__description">Ene cusapici is sequi</div>
-        </div>
-      </div>
-    </li>
+  <ul class="product-list">
+    <li class="product-item">
+  <div class="product">
+    <div class="product__picture card"></div>
+    <div class="product__details">
+      <div class="product__details__title">Brand</div>
+      <div class="product__details__description">Ene cusapici is sequi</div>
+    </div>
+  </div>
+</li>
+    <li class="product-item">
+  <div class="product">
+    <div class="product__picture card"></div>
+    <div class="product__details">
+      <div class="product__details__title">Brand</div>
+      <div class="product__details__description">Ene cusapici is sequi</div>
+    </div>
+  </div>
+</li>
+    <li class="product-item">
+  <div class="product">
+    <div class="product__picture card"></div>
+    <div class="product__details">
+      <div class="product__details__title">Brand</div>
+      <div class="product__details__description">Ene cusapici is sequi</div>
+    </div>
+  </div>
+</li>
+    <li class="product-item">
+  <div class="product">
+    <div class="product__picture card"></div>
+    <div class="product__details">
+      <div class="product__details__title">Brand</div>
+      <div class="product__details__description">Ene cusapici is sequi</div>
+    </div>
+  </div>
+</li>
+    <li class="product-item">
+  <div class="product">
+    <div class="product__picture card"></div>
+    <div class="product__details">
+      <div class="product__details__title">Brand</div>
+      <div class="product__details__description">Ene cusapici is sequi</div>
+    </div>
+  </div>
+</li>
+    <li class="product-item">
+  <div class="product">
+    <div class="product__picture card"></div>
+    <div class="product__details">
+      <div class="product__details__title">Brand</div>
+      <div class="product__details__description">Ene cusapici is sequi</div>
+    </div>
+  </div>
+</li>
+    <li class="product-item">
+  <div class="product">
+    <div class="product__picture card"></div>
+    <div class="product__details">
+      <div class="product__details__title">Brand</div>
+      <div class="product__details__description">Ene cusapici is sequi</div>
+    </div>
+  </div>
+</li>
   </ul>
 </div>
 
+  <div class="shadow js-shadow">
 
-  <script></script>
+  </div>
+  <script src="all.js"></script>
+
   </body>
 </html>

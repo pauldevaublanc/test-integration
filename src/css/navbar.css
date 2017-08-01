@@ -4,6 +4,13 @@
   position: fixed;
   width: 100%;
   z-index: 1;
+  padding-bottom: 6px;
+  transition: background-color 200ms linear;
+}
+
+.scrolled {
+  background-color: var(--whiteColor) !important;
+  transition: background-color 400ms linear;
 }
 
 .navbar__wrapper {
@@ -13,7 +20,7 @@
 .navbar__logo {
   float: left;
   font-weight: 800;
-  color: #000000;
+  color: var(--blackColor);
   font-size: 20px;
   letter-spacing: -0.05em;
   padding: 5px 5px;
@@ -32,7 +39,7 @@
 }
 
 .navbar__menu__link.active {
-  color: #b23131;
+  color: var(--primaryColor);
 }
 
 .navbar__burger {
@@ -40,6 +47,10 @@
 }
 
 @media screen and (max-width: 580px) {
+  .navbar {
+    padding-bottom: 0px;
+  }
+
   .navbar__menu {
     display: none;
   }
@@ -47,6 +58,7 @@
   .navbar__burger {
     display: block;
     float: right;
+    cursor: pointer;
   }
 
 }

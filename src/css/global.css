@@ -1,22 +1,31 @@
+:root {
+  --mainColor: #606060;
+  --primaryColor: #b23131;
+  --secondaryColor: #2eb2a3;
+  --whiteColor: #ffffff;
+  --blackColor: #000000;
+  --blueColor: #445272;
+}
+
 body {
   font-family: 'Roboto', sans-serif !important;
   font-size: 13px;
   line-height: 1.5em;
-  color: #606060;
+  color: var(--mainColor);
   position: relative;
 }
 
 .title {
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
-  color: #606060;
+  color: var(--mainColor);
   letter-spacing: 1px;
   font-size: 25px;
   padding: 20px 0px;
 }
 
 .title-red {
-  color: #b23131;
+  color: var(--primaryColor);
 }
 
 .subtitle {
@@ -27,12 +36,18 @@ body {
 
 .subtitle-blue {
   font-size: 14px;
-  color: #2eb2a3;
+  color: var(--secondaryColor);
   padding-bottom: 7px;
 }
 
 .paragraph {
   padding-bottom: 10px;
+}
+
+.paragraph-help {
+  text-align: left;
+  padding: 10px 0px 0px 19px;
+  font-weight: 800;
 }
 
 .lettrine {
@@ -44,12 +59,31 @@ body {
 }
 
 .button {
-  color: #FFF;
-  background-color: #b23131;
+  color: var(--whiteColor);
+  background-color: var(--primaryColor);
   padding: 10px 70px;
   border: none;
   margin: 15px 0px 5px 0px;
   cursor: pointer;
+}
+
+.button-secondary {
+  color: var(--whiteColor);
+  padding: 10px 50px;
+  margin: 15px 0px 5px 0px;
+  margin-left: 47%;
+  background-color: var(--primaryColor);
+  border: none;
+  cursor: pointer;
+}
+
+.button-blue {
+  background-color: var(--blueColor);
+  margin-left: 36%;
+  color: var(--whiteColor);
+  border: none;
+  padding: 10px 65px;
+  display: inline-block !important;
 }
 
 .list {
@@ -58,17 +92,42 @@ body {
   padding-bottom: 15px;
 }
 
-
 .product-list {
+  text-align: left;
+}
+
+
+.product-item {
   display: inline-block;
   padding: 10px 10px 10px 0px;
 }
 
+.shadow {
+  position: absolute;
+  width: 100%;
+  background-color: var(--blackColor);
+  opacity: .8;
+  height: 100%;
+  top: 0;
+  display: none;
+  left: 0;
+  z-index: 1;
+}
+
+.shadow.visible {
+  display: block;
+}
+
 
 @media screen and (max-width: 580px) {
+
+  .product-list {
+    text-align: center;
+  }
+
   .button {
     display: block;
     margin: 0 auto;
-    width: 318px;
+    width:  278px;
   }
 }
